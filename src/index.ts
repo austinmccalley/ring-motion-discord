@@ -21,7 +21,7 @@ const getMostRecentFile = async (dir: string) => {
   // Find the video file that was created most recently (according to the file name)
   // filename is in the format '%Y-%m-%d_%H-%M-%S_doorbell.mp4'
 
-  const files = await promisify(readdir)(path.resolve(__dirname, '..', dir))
+  const files = await promisify(readdir)(path.resolve(__dirname, dir))
 
   // Get the most recent file
   const mostRecentFile = files.find((file) => {
